@@ -1,0 +1,10 @@
+services: 
+  shell:
+    build: .
+    privileged: true
+    stdin_open: true
+    tty: true
+    volumes:
+       - ${HOME}:/home/${USER}
+    entrypoint: /bin/bash
+    working_dir: /home/${USER}
